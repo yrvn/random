@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: "./src/js/index.js",
     another: "./src/js/another.js",
+    dresden: "./src/js/dresden.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -67,9 +68,7 @@ module.exports = {
         {
           from: "public",
           globOptions: {
-            ignore: [
-              '**/*.DS_Store'
-            ],
+            ignore: ["**/*.DS_Store"],
           },
         },
       ],
@@ -87,6 +86,12 @@ module.exports = {
       inject: true,
       chunks: ["index", "another"],
       filename: "another.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/dresden.html",
+      inject: true,
+      chunks: ["dresden"],
+      filename: "dresden.html",
     }),
   ],
 };

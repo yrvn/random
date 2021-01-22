@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+#main {
+  display: flex;
+  flex: 1;
+}
+#main > article {
+  flex: 1;
+  order: 1;
+}
+#main > nav,
+#main > aside {
+  flex: 0 0 20vw;
+}
+#main > nav {
+  background: $wtf;
+  order: 3;
+}
+#main > aside {
+  background: beige;
+  order: 2;
+}
+header,
+footer {
+  background: $wtf;
+  height: 20vh;
+}
+header,
+footer,
+article,
+nav,
+aside {
+  padding: 1em;
+}
